@@ -1,7 +1,7 @@
 var router = require('angular-ui-router');
 
 var dashboard = angular.module('dashboard', ['ui.router']);
-// require('jquery');
+
 require('bootstrap');
 require('./directives');
 require('./services');
@@ -28,8 +28,20 @@ dashboard.config(function($stateProvider, $urlRouterProvider) {
         url: '/gallery',
         templateUrl: '../gallery.html'
     }
-
+    
+    var footer = {
+            name: 'footer',
+            url: '/footer',
+            templateUrl: '../footer.html'
+        }
+    var mainPage = {
+            name: 'mainPage',
+            url: '/categories',
+            templateUrl: '../../views/mainPage.html'
+        }
     $stateProvider.state(helloState);
+    $stateProvider.state(mainPage);
     $stateProvider.state(aboutState);
     $stateProvider.state(galleryState);
+    $stateProvider.state(footer);
 });

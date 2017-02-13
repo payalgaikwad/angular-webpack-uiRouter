@@ -5,7 +5,7 @@ webpackJsonp([0],[
 	var router = __webpack_require__(1);
 
 	var dashboard = angular.module('dashboard', ['ui.router']);
-	// require('jquery');
+
 	__webpack_require__(2);
 	__webpack_require__(16);
 	__webpack_require__(20);
@@ -32,10 +32,22 @@ webpackJsonp([0],[
 	        url: '/gallery',
 	        templateUrl: '../gallery.html'
 	    }
-
+	    
+	    var footer = {
+	            name: 'footer',
+	            url: '/footer',
+	            templateUrl: '../footer.html'
+	        }
+	    var mainPage = {
+	            name: 'mainPage',
+	            url: '/categories',
+	            templateUrl: '../../views/mainPage.html'
+	        }
 	    $stateProvider.state(helloState);
+	    $stateProvider.state(mainPage);
 	    $stateProvider.state(aboutState);
 	    $stateProvider.state(galleryState);
+	    $stateProvider.state(footer);
 	});
 
 
