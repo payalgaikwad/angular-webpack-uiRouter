@@ -5,7 +5,7 @@ module.exports = {
     watch: true,
     entry: {
         app: './app/app.js',
-        vendor: ['angular']
+        vendor: ['angular', 'angular-ui-router', 'bootstrap', 'jquery']
     },
     output: {
         path: __dirname + '/js',
