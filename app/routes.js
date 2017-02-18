@@ -8,7 +8,7 @@ angular.module('dashboard').config(function($stateProvider, $urlRouterProvider) 
     var helloState = {
         name: 'home',
         url: '/home',
-       templateUrl: '../home.html'
+       templateUrl: './components/home/home.html'
     }
 
     var aboutState = {
@@ -22,7 +22,7 @@ angular.module('dashboard').config(function($stateProvider, $urlRouterProvider) 
         url: '/gallery',
         templateUrl: '../gallery.html'
     }
-    
+
     var footer = {
             name: 'footer',
             url: '/footer',
