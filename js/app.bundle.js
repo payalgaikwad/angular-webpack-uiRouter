@@ -1,26 +1,29 @@
-webpackJsonp([0],{
-
-/***/ 0:
+webpackJsonp([0],[
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
+
+	// require('angular');
 
 	var dashboard = angular.module('dashboard', ['ui.router']);
 
-	__webpack_require__(1);
+
+	// require('bootstrap');
 	// require('./directives');
 	// require('./services');
-	__webpack_require__(15);
-	__webpack_require__(18);
-	__webpack_require__(19);
+	__webpack_require__(1);
+	__webpack_require__(2);
+	__webpack_require__(3);
+
+
 
 
 /***/ },
-
-/***/ 15:
-/***/ function(module, exports, __webpack_require__) {
+/* 1 */
+/***/ function(module, exports) {
 
 	'use strict';
 
-	var angular = __webpack_require__(16);
+	// var angular = require('angular');
 
 	angular.module('dashboard').directive('myfooter', footerDirective);
 
@@ -43,13 +46,12 @@ webpackJsonp([0],{
 	module.exports = footerDirective;
 
 /***/ },
-
-/***/ 18:
-/***/ function(module, exports, __webpack_require__) {
+/* 2 */
+/***/ function(module, exports) {
 
 	'use strict';
 
-	var angular = __webpack_require__(16);
+	// var angular = require('angular');
 
 	angular.module('dashboard').controller('dashboardController', DashboardController);
 
@@ -64,11 +66,10 @@ webpackJsonp([0],{
 
 
 /***/ },
-
-/***/ 19:
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var router = __webpack_require__(20);
+	var router = __webpack_require__(4);
 
 
 	angular.module('dashboard').config(function($stateProvider, $urlRouterProvider) {
@@ -118,5 +119,4 @@ webpackJsonp([0],{
 
 
 /***/ }
-
-});
+]);

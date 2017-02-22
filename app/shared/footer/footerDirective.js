@@ -1,6 +1,6 @@
 'use strict';
 
-var angular = require('angular');
+// var angular = require('angular');
 
 angular.module('dashboard').directive('myfooter', footerDirective);
 
