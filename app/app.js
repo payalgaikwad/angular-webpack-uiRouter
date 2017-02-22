@@ -2,6 +2,9 @@
 
 var dashboard = angular.module('dashboard', ['ui.router']);
 
+angular.element(document).ready(function() {
+  angular.bootstrap(document, ['dashboard']);
+});
 
 // require('bootstrap');
 // require('./directives');
