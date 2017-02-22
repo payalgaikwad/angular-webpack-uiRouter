@@ -5,21 +5,27 @@ angular.module('dashboard').config(function($stateProvider, $urlRouterProvider) 
 
     $urlRouterProvider.otherwise('/home');
 
-    var helloState = {
+    var homeState = {
         name: 'home',
         url: '/home',
-       templateUrl: './components/home/home.html'
+       templateUrl: '../app/components/home/home.html'
     }
 
-    var aboutState = {
-        name: 'about',
-        url: '/about',
+    var productsState = {
+        name: 'products',
+        url: '/products',
         templateUrl: '../about.html'
     }
 
-     var galleryState = {
-        name: 'gallery',
-        url: '/gallery',
+     var dealsState = {
+        name: 'deals',
+        url: '/deals',
+        templateUrl: '../gallery.html'
+    }
+
+     var contactState = {
+        name: 'contact',
+        url: '/contact',
         templateUrl: '../gallery.html'
     }
 
@@ -33,9 +39,9 @@ angular.module('dashboard').config(function($stateProvider, $urlRouterProvider) 
             url: '/categories',
             templateUrl: '../../views/mainPage.html'
         }
-    $stateProvider.state(helloState);
-    $stateProvider.state(mainPage);
-    $stateProvider.state(aboutState);
-    $stateProvider.state(galleryState);
+    $stateProvider.state(homeState);
+    $stateProvider.state(dealsState);
+    $stateProvider.state(contactState);
+    $stateProvider.state(productsState);
     $stateProvider.state(footer);
 });

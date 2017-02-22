@@ -24,15 +24,15 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Deals</a></li>
-                    <li><a href="#">Stores</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a ui-sref="home">Home</a></li>
+                    <li><a ui-sref="products">Products</a></li>
+                    <li><a ui-sref="deals">Deals</a></li>
+                    <li><a ui-sref="stores">Stores</a></li>
+                    <li><a ui-sref="contact">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    <li><a ui-sref="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a ui-sref="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
                 </ul>
                 </div>
             </div>
@@ -41,13 +41,19 @@
         <div class="jumbotron" ng-controller="dashboardController as dashctrl">
         <div class="container text-center">
             <h1>Online Store</h1>      
-            <p>Mission, Vission & Values{{dashctrl.github}}</p>
+            <p>Mission, Vission & Values {{dashctrl.github}}</p>
         </div>
         </div>
 
-        <div ui-sref="mainPage"></div>
+        <!-- MAIN CONTENT -->
+        <div class="container">
 
-        <footer class="container-fluid text-center" ui-view="footer"></footer>
+        <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+
+        <div ui-view></div>
+        </div>
+        
+        <myfooter></myfooter>
 
 
     </body>
